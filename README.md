@@ -1,5 +1,6 @@
-## this is a vibe coded fork and I strongly recommend that it not be used.  For all I know, it may be slowly deleting my firmware.  
-# no warranty, obv. Thanks to mathewkayne for original version, which was not vibecoded and was in fact competently made
+# this is a vibe coded fork and I strongly recommend that it not be used.  For all I know, it may be slowly deleting my firmware.  
+
+## no warranty, obv. [Thanks to mathewkayne for original version](https://github.com/matthewkayne/flipper-access-audit), which was not vibecoded and was in fact competently made
 
 
 # Flipper Access Audit
