@@ -1,8 +1,3 @@
-# this is a vibe coded fork and I strongly recommend that it not be used.  For all I know, it may be slowly deleting my firmware.  
-
-## no warranty, obv. [Thanks to mathewkayne for original version](https://github.com/matthewkayne/flipper-access-audit), which was not vibecoded and was in fact competently made
-
-
 # Flipper Access Audit
 
 [![Build](https://github.com/matthewkayne/flipper-access-audit/actions/workflows/build.yml/badge.svg)](https://github.com/matthewkayne/flipper-access-audit/actions/workflows/build.yml)
@@ -10,51 +5,9 @@
 [![Release](https://img.shields.io/github/v/release/matthewkayne/flipper-access-audit)](https://github.com/matthewkayne/flipper-access-audit/releases/latest)
 [![License](https://img.shields.io/github/license/matthewkayne/flipper-access-audit)](LICENSE)
 
-A Flipper Zero app for **defensive auditing of NFC and RFID access-control credentials**.
+A Flipper Zero app for counting scans of particular tags over time.  Reporting to be done off device with separate tools.  This just logs data when it scans the NFC: Date & ID in a non-specifiable CSV that can be wiped from within the app. 
 
-Tap a card, get an instant risk score and plain-English advice. Save a named session report to SD.
-
-> **Authorized use only.** This tool is intended for security professionals, system owners, and researchers assessing systems they own or are permitted to test.
-
----
-
-## Features
-
-- **Deep card classification**: MIFARE Classic 1K/4K/Mini, DESFire EV1/EV2/EV3/Light, MIFARE Plus SL1/SL2/SL3, Ultralight C, NTAG203/213/215/216, NTAG I2C, ISO14443-A/B, ISO15693, FeliCa (Standard/Lite), SLIX, ST25TB; 125 kHz RFID: EM4100, HID H10301, HID Generic, Indala; HID iCLASS (Legacy) 2k/16k/32k
-- **Instant risk score**: 0-100 score with HIGH RISK / MODERATE / LOW RISK / SECURE label
-- **Per-card advice**: plain-English recommendation written to every report entry
-- **Multi-scan sessions**: scan up to 20 cards per session; live `[N]` counter visible on both scan and result screens
-- **Named sessions**: optionally label a session before saving using an on-screen QWERTY keyboard
-- **SD card reports**: timestamped `.txt` report saved to `/ext/apps_data/access_audit/` with per-card UID, SAK/ATQA, advice, and session-level advisory
-- **On-device report viewer**: browse, scroll, and delete saved reports without leaving the app
-- **NFC + RFID + iCLASS**: Left/Right cycles between 13.56 MHz NFC, 125 kHz RFID, and HID iCLASS scanning
-
----
-
-## Installation
-
-### Option 1: qFlipper (recommended)
-
-1. Download `access_audit.fap` from the [latest release](https://github.com/matthewkayne/flipper-access-audit/releases/latest)
-2. Open [qFlipper](https://flipperzero.one/update) and connect your Flipper via USB
-3. Click the **File manager** tab
-4. Navigate to `SD Card → apps → Tools`
-5. Drag and drop `access_audit.fap` into that folder
-6. On your Flipper: **Apps → Tools → Access Audit**
-
-### Option 2: USB mass storage
-
-1. Download `access_audit.fap` from the [latest release](https://github.com/matthewkayne/flipper-access-audit/releases/latest)
-2. On your Flipper: **Settings → Storage → Unmount SD card**, which exposes the SD card as a USB drive
-3. Copy `access_audit.fap` to the `apps/Tools/` folder on the drive
-4. Eject the drive, then on your Flipper: **Apps → Tools → Access Audit**
-
-### Option 3: SD card reader
-
-1. Download `access_audit.fap` from the [latest release](https://github.com/matthewkayne/flipper-access-audit/releases/latest)
-2. Remove the SD card from your Flipper and insert it into a card reader
-3. Copy `access_audit.fap` to the `apps/Tools/` folder on the card (create the folder if it doesn't exist)
-4. Reinsert the SD card and launch from **Apps → Tools → Access Audit**
+Forked from the [original](https://github.com/matthewkayne/flipper-access-audit) for my own purposes.  Not meant to be superior or a replacement.
 
 ### Build from source
 
@@ -136,5 +89,4 @@ access_audit.c            - app loop, screens, input handling
 ## Author
 
 [@matthewkayne](https://github.com/matthewkayne) - AI-assisted development with [Claude Code](https://claude.ai/code)
-
 ---
